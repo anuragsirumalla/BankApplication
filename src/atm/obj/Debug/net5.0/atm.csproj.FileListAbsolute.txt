@@ -1,0 +1,16 @@
+D:\innRoad\ATM\src\atm\bin\Debug\net5.0\atm.exe
+D:\innRoad\ATM\src\atm\bin\Debug\net5.0\atm.deps.json
+D:\innRoad\ATM\src\atm\bin\Debug\net5.0\atm.runtimeconfig.json
+D:\innRoad\ATM\src\atm\bin\Debug\net5.0\atm.runtimeconfig.dev.json
+D:\innRoad\ATM\src\atm\bin\Debug\net5.0\atm.dll
+D:\innRoad\ATM\src\atm\bin\Debug\net5.0\ref\atm.dll
+D:\innRoad\ATM\src\atm\bin\Debug\net5.0\atm.pdb
+D:\innRoad\ATM\src\atm\obj\Debug\net5.0\atm.csprojAssemblyReference.cache
+D:\innRoad\ATM\src\atm\obj\Debug\net5.0\atm.GeneratedMSBuildEditorConfig.editorconfig
+D:\innRoad\ATM\src\atm\obj\Debug\net5.0\atm.AssemblyInfoInputs.cache
+D:\innRoad\ATM\src\atm\obj\Debug\net5.0\atm.AssemblyInfo.cs
+D:\innRoad\ATM\src\atm\obj\Debug\net5.0\atm.csproj.CoreCompileInputs.cache
+D:\innRoad\ATM\src\atm\obj\Debug\net5.0\atm.dll
+D:\innRoad\ATM\src\atm\obj\Debug\net5.0\ref\atm.dll
+D:\innRoad\ATM\src\atm\obj\Debug\net5.0\atm.pdb
+D:\innRoad\ATM\src\atm\obj\Debug\net5.0\atm.genruntimeconfig.cache
