@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace atm
 {
-     public class CustomerDetails
+    public class CustomerDetails
     {
         public long AccountNumber
         {
@@ -15,11 +15,11 @@ namespace atm
             get;
             set;
         }
-         private string Name
-            {
-                get;
-                set;
-            }
+        public string Name
+        {
+            get;
+            set;
+        }
         public long balance
         {
             get;
@@ -27,35 +27,34 @@ namespace atm
         }
         public CustomerDetails()
         {
-                foreach (var item in CustomerDetailsList)
-                {
-                    Console.WriteLine("{item.AccountNumber}  ----->   {item.Pin}");
-                }
+            CustomerDetailsList = new List<CustomerDetails>();
         }
-        public CustomerDetails(long AccountNumber, int pin)
+        public CustomerDetails(long AccountNumber, int pin, string Name)
         {
             balance = 0;
             this.AccountNumber = AccountNumber;
             this.Pin = pin;
-            Console.WriteLine("Succesfully added");
+            this.Name = Name;
         }
-           public void setCustomerDetails()
-            {
-            Console.WriteLine("Enter customer Details");
-            Console.WriteLine("Enter Account Number");
+        public void setCustomerDetails()
+        {
+            Console.Write("Hello! Please your Details");
+            Console.Write("\nEnter your name : ");
+            Name = Console.ReadLine();
+            Console.Write("Account Number : ");
             AccountNumber = Convert.ToInt64(Console.ReadLine());
-            Console.WriteLine("Enter pin");
+            Console.Write("Pin : ");
             Pin = Convert.ToInt16(Console.ReadLine());
-             CustomerDetailsList.Add(new CustomerDetails(AccountNumber,Pin));
-             Console.WriteLine($"customers details {CustomerDetailsList.Count}");
-            }
-            public void ShowCustomer()
+            CustomerDetailsList.Add(new CustomerDetails(AccountNumber, Pin, Name));
+            Console.WriteLine("Your Details Succesfully added ");
+        }
+        public void ShowCustomer()
+        {
+            foreach (var customer in CustomerDetailsList)
             {
-                foreach (var customer in CustomerDetailsList)
-            {
-                Console.WriteLine(customer.AccountNumber +"    "+ customer.Pin);          
-            }    
+                Console.WriteLine(customer.AccountNumber + "    " + customer.Pin);
             }
-        public List<CustomerDetails> CustomerDetailsList = new List<CustomerDetails>();
+        }
+        public List<CustomerDetails> CustomerDetailsList;
     }
 }
