@@ -3,33 +3,53 @@ using System.Collections.Generic;
 
 namespace atm
 {
-    public class Login 
+    public class Login
     {
-         private bool LoginStatus
-         {
-             set;
-             get;
-         }
-      public Login()
-      {    
- 
-      }
-        CustomerDetails cust = new CustomerDetails();
+        private long Account
+        {
+            set;
+            get;
+        }
+        private int Password
+        {
+            set;
+            get;
+        }
+        private bool LoginStatus
+        {
+            set;
+            get;
+        }
+        public Login()
+        {
+            LoginStatus = false;
+        }
+
         public bool LoginStatusMethod()
         {
             return LoginStatus;
         }
-
-      public CustomerDetails GetStatus()
-      {
-            
-            Console.WriteLine("total count    "+ cust.CustomerDetailsList.Count);
-            foreach (var customer in cust.CustomerDetailsList)
+        void GetLoginCustomerDetails()
+        {
+            Console.Write("Enter Account Number : ");
+            Account = Convert.ToInt64(Console.ReadLine());
+            Console.Write("Enter pin : ");
+            Password = Convert.ToInt16(Console.ReadLine());
+        }
+        public CustomerDetails GetStatus(ref CustomerDetails Customer)
+        {
+            GetLoginCustomerDetails();
+            foreach (var LoginCustomer in Customer.CustomerDetailsList)
             {
-                          
-            }    
-        return null;
-           
-      }
+                if (LoginCustomer.AccountNumber == Account && LoginCustomer.Pin == Password)
+                {
+                    Console.WriteLine($"Login Success");
+                    LoginStatus = true;
+                    return LoginCustomer;
+                }
+            }
+            return null;
+        }
     }
+
 }
